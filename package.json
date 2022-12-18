@@ -6,6 +6,7 @@
   },
   "description": "",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
@@ -42,6 +43,8 @@
   },
   "homepage": "https://github.com/vschagas/Blogs_Api#readme",
   "devDependencies": {
+    "chai": "^4.3.6",
+    "chai-http": "^4.3.0",
     "change-case": "4.1.2",
     "commitizen": "^4.2.6",
     "cz-conventional-changelog": "^3.3.0",
@@ -52,15 +55,13 @@
     "frisby": "2.1.2",
     "jest": "26.0.1",
     "jest-each": "28.0.1",
+    "mocha": "^10.1.0",
     "nodemon": "2.0.15",
     "sequelize-cli": "6.2.0",
     "sequelize-jest-helpers-trybe": "1.0.0",
-    "chai": "^4.3.6",
-    "chai-http": "^4.3.0",
-    "mocha": "^10.1.0",
+    "sequelize-test-helpers": "^1.4.3",
     "sinon": "^14.0.1",
-    "sinon-chai": "^3.7.0",
-    "sequelize-test-helpers": "^1.4.3"
+    "sinon-chai": "^3.7.0"
   },
   "config": {
     "commitizen": {
