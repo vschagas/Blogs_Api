@@ -1,9 +1,14 @@
 const services = require('../services');
 const generateToken = require('../helpers/generateToken');
 const identifyUserIdByEmail = require('../helpers/identifyUser');
+const { encryptPassword } = require('../helpers/Bcrypt');
 
 const createUser = async (req, res) => {
   const user = req.body;
+  const encriptedPassword = await encryptPassword(user.password);
+
+  user.password = encriptedPassword;
+
   try {
     await services.user.createUser(user);
     const token = generateToken(user);
