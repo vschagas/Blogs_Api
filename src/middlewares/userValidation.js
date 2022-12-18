@@ -1,5 +1,5 @@
 const Joi = require('joi');
-const getRegisteredUsers = require('../helpers/getRegisteredUsers');
+const { getRegisteredUsers } = require('../helpers/getRegisteredUsers');
 
 const fieldMissing = 'Some required fields are missing';
 
