@@ -27,15 +27,14 @@ const loginValidation = async (req, res, next) => {
   const user = req.body;
   const { email, password } = user;
   const fieldError = loginFieldsValidation(user);
+
   if (fieldError) {
     return res.status(400).json({ message: fieldError });
   }
 
-  const { passwords, emails } = await getRegisteredUsers();
+   await getRegisteredUsers.getRegisteredUser(email, password);
 
-  if (!passwords.includes(password) || !emails.includes(email)) {
-    return res.status(401).json({ message: 'Invalid fields' });
-  }
+  // await checkPassword(email, password);
 
   return next();
 };
