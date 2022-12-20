@@ -2,7 +2,7 @@
   "openapi": "3.0.0",
   "info": {
     "title": "Blogs API",
-    "description": "Este é um projeto RESTful API, implementado em NodeJs, com arquitetura MSC, Sequelize, banco de dados MySQL e autenticação com JWT (Json web Token). Realizado durante meus estudos na [Trybe](https://www.betrybe.com/), neste projeto é possível realizar um CRUD de operações. Acesse o repositório [Blog API's Github repository](https://github.com/vschagas/Blogs_Api) para mais informações! -- Para acessar as rotas autenticadas: 1. Faça login ou crie um novo usuário para receber o token. 2. Copie o token gerado no campo 'Respose Body', clique em Authorize, cole no campo 'value' e clique em 'Authorize'.",
+    "description": "Este é um projeto RESTful API, implementado em NodeJs, com arquitetura MSC, Sequelize, banco de dados MySQL e autenticação com JWT (Json web Token). Realizado durante meus estudos na [Trybe](https://www.betrybe.com/), neste projeto é possível realizar um CRUD de operações. Acesse o repositório [Blog API's Github repository](https://github.com/vschagas/Blogs_Api) para mais informações! -- Para acessar as rotas autenticadas: 1. Crie um novo usuário para receber o token. 2. Copie o token gerado no campo 'Respose Body', clique em Authorize, cole no campo 'value' e clique em 'Authorize'.",
     "version": "1.0.0"
   },
   "servers": [
