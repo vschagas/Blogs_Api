@@ -22,12 +22,12 @@ const createBlogPost = async (req, res) => {
 
   await registerNewPost(newPost, result.id);
 
-  res.status(201).json(result);
+  return res.status(201).json(result);
 };
 
 const getAllPosts = async (_req, res) => {
   const results = await services.posts.getAllPosts();
-  res.status(200).json(results);
+  return res.status(200).json(results);
 };
 
 const getPostById = async (req, res) => {
@@ -39,7 +39,7 @@ const getPostById = async (req, res) => {
   }
 
   const result = await services.posts.getPostById(id);
-  res.status(200).json(result);
+  return res.status(200).json(result);
 };
 
 const updatePost = async (req, res) => {
@@ -80,13 +80,13 @@ const deletePost = async (req, res) => {
 
   await services.posts.deletePost(id);
 
-  res.status(204).json({ message: 'Post deleted' });
+  return res.status(204).json({ message: 'Post deleted' });
 };
 
 const searchPost = async (req, res) => {
   const { q } = req.query;
   const result = await services.posts.searchPost(q);
-  res.status(200).json(result);
+  return res.status(200).json(result);
 };
 
 module.exports = {
