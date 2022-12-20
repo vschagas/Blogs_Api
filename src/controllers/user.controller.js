@@ -12,15 +12,15 @@ const createUser = async (req, res) => {
   try {
     await services.user.createUser(user);
     const token = generateToken(user);
-    res.status(201).json({ token });
+    return res.status(201).json({ token });
   } catch (error) {
-    res.status(500).json({ message: 'Internal error' });
+    return res.status(500).json({ message: 'Internal error' });
   }
 };
 
 const getUsers = async (_req, res) => {
   const result = await services.user.getUsers();
-  res.status(200).json(result);
+  return res.status(200).json(result);
 };
 
 const getUserById = async (req, res) => {
@@ -29,13 +29,13 @@ const getUserById = async (req, res) => {
   if (!result) {
     return res.status(404).json({ message: 'User does not exist' });
   }
-  res.status(200).json(result);
+  return res.status(200).json(result);
 };
 
 const deleteUser = async (req, res) => {
   const id = await identifyUserIdByEmail(req.email);
   await services.user.deleteUser(id);
-  res.status(204).json({ message: 'User deleted' });
+  return res.status(204).json({ message: 'User deleted' });
 };
 
 module.exports = {
