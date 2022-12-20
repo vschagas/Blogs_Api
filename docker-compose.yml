@@ -2,8 +2,9 @@ version: "3"
 
 services:
   node:
-    from: node:16.14
+    image: node:16.14
     container_name: blogs_api
+    command: bash -c "npm install && npm run start"
     restart: always
     working_dir: /app
     volumes:
