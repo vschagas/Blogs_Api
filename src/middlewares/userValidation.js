@@ -1,5 +1,5 @@
 const Joi = require('joi');
-const { getRegisteredUsers } = require('../helpers/getRegisteredUsers');
+const getRegisteredUsers = require('../helpers/getRegisteredUsers');
 
 const fieldMissing = 'Some required fields are missing';
 
@@ -24,13 +24,15 @@ const schema = Joi.object({
 
 const userValidation = async (req, res, next) => {
   const user = req.body;
+  console.log(user);
   const { error } = schema.validate(user);
 
   if (error) {
     return res.status(400).json({ message: error.details[0].message });
   }
 
-  const { emails } = await getRegisteredUsers();
+  const { emails } = await getRegisteredUsers.getRegisteredUser();
+
   if (emails.includes(user.email)) {
     return res.status(409).json({ message: 'User already registered' });
   }

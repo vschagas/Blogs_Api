@@ -1,13 +1,12 @@
 const { User } = require('../models');
 const { checkPassword } = require('./Bcrypt');
 
-const getRegisteredUsers = async () => {
+const getAllRegistredUser = async () => {
   const result = await User.findAll({
     attributes: ['email', 'password'],
   });
   const emails = result.map((element) => element.dataValues.email);
   const passwords = result.map((element) => element.dataValues.password);
-
   return { emails, passwords };
 };
 
@@ -35,6 +34,6 @@ const getRegisteredUser = async (email, password) => {
 };
 
 module.exports = {
-  getRegisteredUsers,
+  getAllRegistredUser,
   getRegisteredUser,
 };
