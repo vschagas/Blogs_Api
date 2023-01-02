@@ -46,13 +46,13 @@ Populando o banco com dados
 
     npm run seed
 
-### 6 - Agora execute a aplicação com o comando:
+<!-- ### 6 - Agora execute a aplicação com o comando:
 
     npm start
 
 Para conferir a cobertura de testes execute o comando:
 
-    npm run test-coverage
+    npm run test-coverage -->
 
 </details>
 <br />
