@@ -78,9 +78,6 @@ Acesse a rota http://localhost:3000/documentation para acessar a documentação 
 - MySQL
 - JWT
 - Joi
-- Mocha.js
-- Chai.js
-- Sinon.js
 - Swagger
 
 <!-- # -->
